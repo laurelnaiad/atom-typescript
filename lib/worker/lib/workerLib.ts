@@ -235,13 +235,14 @@ export class Parent extends RequesterResponder {
             var spawnEnv = (process.platform === 'linux') ? Object.create(process.env) : {};
             spawnEnv['ATOM_SHELL_INTERNAL_RUN_AS_NODE'] = '1';
             this.child = spawn(this.node, [
-            // '--debug', // Uncomment if you want to debug the child process
+              // '--debug-brk', // Uncomment if you want to debug the child process
                 childJsPath
             ].concat(customArguments), {
               cwd: path.dirname(childJsPath),
               env: spawnEnv,
               stdio: ['ipc']
             });
+            console.log(this.child.pid);
 
             this.child.on('error', (err) => {
                 if (err.code === "ENOENT" && err.path === this.node) {

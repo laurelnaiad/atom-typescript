@@ -364,7 +364,7 @@ export function getDefaultInMemoryProject(srcFile: string): TypeScriptProjectFil
  * Note: Definition files (.d.ts) are considered thier own project
  */
 export function getProjectSync(pathOrSrcFile: string): TypeScriptProjectFileDetails {
-
+    console.log(pathOrSrcFile);
     if (!fs.existsSync(pathOrSrcFile)) {
         throw new Error(errors.GET_PROJECT_INVALID_PATH);
     }

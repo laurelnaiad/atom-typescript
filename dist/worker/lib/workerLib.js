@@ -161,6 +161,7 @@ var Parent = (function (_super) {
                 env: spawnEnv,
                 stdio: ['ipc']
             });
+            console.log(this.child.pid);
             this.child.on('error', function (err) {
                 if (err.code === "ENOENT" && err.path === _this.node) {
                     _this.gotENOENTonSpawnNode = true;

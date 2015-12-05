@@ -938,26 +938,24 @@ interface GetOutputJsStatusResponse {
 export function getOutputJsStatus(query: FilePathQuery): Promise<GetOutputJsStatusResponse> {
     consistentPath(query);
     var project = getOrCreateProject(query.filePath);
-    return getRawOutputPostExternal(project, query.filePath)
-    .then((output) => {
-        if (output.emitSkipped) {
-            if (output.outputFiles && output.outputFiles.length === 1) {
-                if (output.outputFiles[0].text === building.Not_In_Context) {
-                    return resolve({ emitDiffers: false });
-                }
-            }
-            return resolve({ emitDiffers: true });
-        }
-        else {
-            var jsFile = output.outputFiles.filter(x=> path.extname(x.name) == ".js")[0];
-            if (!jsFile) {
+    var output = getRawOutputPostExternal(project, query.filePath);
+    if (output.emitSkipped) {
+        if (output.outputFiles && output.outputFiles.length === 1) {
+            if (output.outputFiles[0].text === building.Not_In_Context) {
                 return resolve({ emitDiffers: false });
-            } else {
-                var emitDiffers = !fs.existsSync(jsFile.name) || fs.readFileSync(jsFile.name).toString() !== jsFile.text;
-                return resolve({ emitDiffers });
             }
         }
-    });
+        return resolve({ emitDiffers: true });
+    }
+    else {
+        var jsFile = output.outputFiles.filter(x=> path.extname(x.name) == ".js")[0];
+        if (!jsFile) {
+            return resolve({ emitDiffers: false });
+        } else {
+            var emitDiffers = !fs.existsSync(jsFile.name) || fs.readFileSync(jsFile.name).toString() !== jsFile.text;
+            return resolve({ emitDiffers });
+        }
+    }
 }
 
 /**
