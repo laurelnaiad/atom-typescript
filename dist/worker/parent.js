@@ -1,4 +1,3 @@
-"use strict";
 var debug_1 = require("./debug");
 var childprocess = require('child_process');
 var exec = childprocess.exec;

@@ -1,4 +1,3 @@
-"use strict";
 var fsu = require("../utils/fsUtil");
 var simpleValidator = require('./simpleValidator');
 var types = simpleValidator.types;
@@ -192,6 +191,7 @@ function getDefaultInMemoryProject(srcFile) {
 }
 exports.getDefaultInMemoryProject = getDefaultInMemoryProject;
 function getProjectSync(pathOrSrcFile) {
+    console.log(pathOrSrcFile);
     if (!fs.existsSync(pathOrSrcFile)) {
         throw new Error(exports.errors.GET_PROJECT_INVALID_PATH);
     }

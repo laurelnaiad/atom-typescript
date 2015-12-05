@@ -1,4 +1,3 @@
-"use strict";
 var vm = require('vm');
 var fs = require('fs');
 global.stack = function () {

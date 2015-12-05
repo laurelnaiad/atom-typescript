@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -63,5 +62,5 @@ var SimpleOverlaySelectListView = (function (_super) {
         this.hide();
     };
     return SimpleOverlaySelectListView;
-}(sp.SelectListView));
+})(sp.SelectListView);
 exports.SimpleOverlaySelectListView = SimpleOverlaySelectListView;

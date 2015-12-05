@@ -1,4 +1,3 @@
-"use strict";
 var HTMLtoJSX = require("htmltojsx");
 function convert(content, indentSize) {
     var indent = Array(indentSize + 1).join(' ');

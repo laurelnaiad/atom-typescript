@@ -1,4 +1,3 @@
-"use strict";
 var JSON2DTS = require("json2dts");
 var Json2dts = JSON2DTS.Json2dts;
 var toValidJSON = JSON2DTS.toValidJSON;

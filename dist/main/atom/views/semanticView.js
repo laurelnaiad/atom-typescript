@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -96,7 +95,7 @@ var MyComponent = (function (_super) {
         this.state.editor.setCursorBufferPosition([gotoLine, 0]);
     };
     return MyComponent;
-}(React.Component));
+})(React.Component);
 var SemanticView = (function (_super) {
     __extends(SemanticView, _super);
     function SemanticView(config) {
@@ -124,7 +123,7 @@ var SemanticView = (function (_super) {
         React.render(React.createElement(MyComponent, {}), this.rootDomElement);
     };
     return SemanticView;
-}(sp.ScrollView));
+})(sp.ScrollView);
 exports.SemanticView = SemanticView;
 var panel;
 function attach() {

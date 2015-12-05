@@ -1,4 +1,3 @@
-"use strict";
 var fsu = require("../utils/fsUtil");
 var fs = require('fs');
 var path = require('path');
@@ -600,7 +599,7 @@ exports.getOutputJs = getOutputJs;
 function getOutputJsStatus(query) {
     projectCache_1.consistentPath(query);
     var project = projectCache_1.getOrCreateProject(query.filePath);
-    var output = building_1.getRawOutput(project, query.filePath);
+    var output = building_1.getRawOutputPostExternal(project, query.filePath);
     if (output.emitSkipped) {
         if (output.outputFiles && output.outputFiles.length === 1) {
             if (output.outputFiles[0].text === building.Not_In_Context) {
@@ -609,13 +608,15 @@ function getOutputJsStatus(query) {
         }
         return resolve({ emitDiffers: true });
     }
-    var jsFile = output.outputFiles.filter(function (x) { return path.extname(x.name) == ".js"; })[0];
-    if (!jsFile) {
-        return resolve({ emitDiffers: false });
-    }
     else {
-        var emitDiffers = !fs.existsSync(jsFile.name) || fs.readFileSync(jsFile.name).toString() !== jsFile.text;
-        return resolve({ emitDiffers: emitDiffers });
+        var jsFile = output.outputFiles.filter(function (x) { return path.extname(x.name) == ".js"; })[0];
+        if (!jsFile) {
+            return resolve({ emitDiffers: false });
+        }
+        else {
+            var emitDiffers = !fs.existsSync(jsFile.name) || fs.readFileSync(jsFile.name).toString() !== jsFile.text;
+            return resolve({ emitDiffers: emitDiffers });
+        }
     }
 }
 exports.getOutputJsStatus = getOutputJsStatus;

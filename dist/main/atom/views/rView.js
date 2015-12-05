@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -28,7 +27,7 @@ var MyComponent = (function (_super) {
     };
     MyComponent.defaultProps = { count: 0 };
     return MyComponent;
-}(React.Component));
+})(React.Component);
 var RView = (function (_super) {
     __extends(RView, _super);
     function RView(config) {
@@ -60,5 +59,5 @@ var RView = (function (_super) {
     });
     RView.protocol = 'atomtsview:';
     return RView;
-}(sp.ScrollView));
+})(sp.ScrollView);
 exports.RView = RView;

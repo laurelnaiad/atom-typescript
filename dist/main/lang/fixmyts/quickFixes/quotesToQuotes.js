@@ -1,4 +1,3 @@
-"use strict";
 var QuotesToQuotes = (function () {
     function QuotesToQuotes() {
         this.key = QuotesToQuotes.name;
@@ -35,5 +34,5 @@ var QuotesToQuotes = (function () {
         return [refactoring];
     };
     return QuotesToQuotes;
-}());
+})();
 exports.QuotesToQuotes = QuotesToQuotes;

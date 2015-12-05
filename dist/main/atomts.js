@@ -1,4 +1,3 @@
-"use strict";
 var atomConfig = require('./atom/atomConfig');
 var makeTypeScriptGlobal_1 = require("../typescript/makeTypeScriptGlobal");
 makeTypeScriptGlobal_1.makeTsGlobal(atomConfig.typescriptServices);

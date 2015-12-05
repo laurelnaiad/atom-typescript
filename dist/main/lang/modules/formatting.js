@@ -1,4 +1,3 @@
-"use strict";
 function formatDocument(proj, filePath) {
     var textChanges = proj.languageService.getFormattingEditsForDocument(filePath, proj.projectFile.project.formatCodeOptions);
     var edits = textChanges.map(function (change) {

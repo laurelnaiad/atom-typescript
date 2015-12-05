@@ -1,4 +1,3 @@
-"use strict";
 exports.errorsInOpenFiles = { members: [] };
 exports.buildOutput = { members: [] };
 exports.referencesOutput = { members: [] };

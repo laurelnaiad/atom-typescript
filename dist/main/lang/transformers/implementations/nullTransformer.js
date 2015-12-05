@@ -1,4 +1,3 @@
-"use strict";
 var transformerRegistry_1 = require("../transformerRegistry");
 var NullTransformer = (function () {
     function NullTransformer() {
@@ -8,6 +7,6 @@ var NullTransformer = (function () {
         return { code: code };
     };
     return NullTransformer;
-}());
+})();
 exports.NullTransformer = NullTransformer;
 transformerRegistry_1.add(new NullTransformer());

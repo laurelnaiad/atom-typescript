@@ -1,4 +1,3 @@
-"use strict";
 var typescriptServices = '';
 if (process.argv.length > 2) {
     typescriptServices = process.argv[2];

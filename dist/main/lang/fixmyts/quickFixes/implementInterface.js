@@ -1,4 +1,3 @@
-"use strict";
 var ast = require("../astUtils");
 var os_1 = require("os");
 function getClassAndInterfaceName(error) {
@@ -43,5 +42,5 @@ var ImplementInterface = (function () {
         return refactorings;
     };
     return ImplementInterface;
-}());
+})();
 exports.ImplementInterface = ImplementInterface;

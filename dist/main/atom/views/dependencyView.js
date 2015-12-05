@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -42,7 +41,7 @@ var DependencyView = (function (_super) {
         });
     };
     return DependencyView;
-}(sp.ScrollView));
+})(sp.ScrollView);
 exports.DependencyView = DependencyView;
 var prefixes = {
     circle: 'circle'
@@ -369,7 +368,7 @@ var D3Graph = (function () {
         return this.circularPaths;
     };
     return D3Graph;
-}());
+})();
 function linkArc(d) {
     var targetX = d.target.x;
     var targetY = d.target.y;

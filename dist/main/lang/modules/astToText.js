@@ -1,4 +1,3 @@
-"use strict";
 var astUtils_1 = require("../fixmyts/astUtils");
 function astToText(srcFile) {
     var nodeIndex = 0;

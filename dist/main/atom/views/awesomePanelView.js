@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -19,7 +18,7 @@ var AwesomePanelView = (function (_super) {
         this.something.html('<div>tada</div>');
     };
     return AwesomePanelView;
-}(view.View));
+})(view.View);
 exports.AwesomePanelView = AwesomePanelView;
 function attach() {
     exports.panelView = new AwesomePanelView({});

@@ -1,4 +1,3 @@
-"use strict";
 var mainPanelView = require('./views/mainPanelView');
 var lineMessageView = require('./views/lineMessageView');
 var gotoHistory = require('./gotoHistory');

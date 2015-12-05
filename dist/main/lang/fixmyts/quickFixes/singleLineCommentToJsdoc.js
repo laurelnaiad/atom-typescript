@@ -1,4 +1,3 @@
-"use strict";
 var utils = require("../../utils");
 var SingleLineCommentToJsdoc = (function () {
     function SingleLineCommentToJsdoc() {
@@ -40,5 +39,5 @@ var SingleLineCommentToJsdoc = (function () {
         return [refactoring];
     };
     return SingleLineCommentToJsdoc;
-}());
+})();
 exports.SingleLineCommentToJsdoc = SingleLineCommentToJsdoc;

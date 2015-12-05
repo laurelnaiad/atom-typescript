@@ -1,4 +1,3 @@
-"use strict";
 var makeTypeScriptGlobal_1 = require("../../typescript/makeTypeScriptGlobal");
 makeTypeScriptGlobal_1.makeTsGlobal();
 var tsconfig = require("../tsconfig/tsconfig");

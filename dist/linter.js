@@ -1,4 +1,3 @@
-"use strict";
 var parent = require('./worker/parent');
 var fs = require('fs');
 var atom_1 = require("atom");

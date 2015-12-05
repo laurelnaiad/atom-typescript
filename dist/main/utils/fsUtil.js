@@ -1,4 +1,3 @@
-"use strict";
 function consistentPath(filePath) {
     return filePath.split('\\').join('/');
 }

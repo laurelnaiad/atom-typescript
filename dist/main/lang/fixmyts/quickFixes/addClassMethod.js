@@ -1,4 +1,3 @@
-"use strict";
 var ast = require("../astUtils");
 var os_1 = require("os");
 function getIdentifierAndClassNames(error) {
@@ -150,5 +149,5 @@ var AddClassMethod = (function () {
         return [refactoring];
     };
     return AddClassMethod;
-}());
+})();
 exports.AddClassMethod = AddClassMethod;

@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -168,7 +167,7 @@ var TypeScriptSemanticGrammar = (function (_super) {
         return { tokens: tokens, ruleStack: tsTokensWithRuleStack.ruleStack };
     };
     return TypeScriptSemanticGrammar;
-}(AtomTSBaseGrammar));
+})(AtomTSBaseGrammar);
 exports.TypeScriptSemanticGrammar = TypeScriptSemanticGrammar;
 function getAtomStyleForToken(token, str) {
     switch (token.classification) {

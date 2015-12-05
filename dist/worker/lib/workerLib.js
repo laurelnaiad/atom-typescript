@@ -1,4 +1,3 @@
-"use strict";
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -139,7 +138,7 @@ var RequesterResponder = (function () {
             .forEach(function (funcName) { return _this.addToResponders(aModule[funcName]); });
     };
     return RequesterResponder;
-}());
+})();
 var Parent = (function (_super) {
     __extends(Parent, _super);
     function Parent() {
@@ -162,6 +161,7 @@ var Parent = (function (_super) {
                 env: spawnEnv,
                 stdio: ['ipc']
             });
+            console.log(this.child.pid);
             this.child.on('error', function (err) {
                 if (err.code === "ENOENT" && err.path === _this.node) {
                     _this.gotENOENTonSpawnNode = true;
@@ -213,7 +213,7 @@ var Parent = (function (_super) {
         this.child = null;
     };
     return Parent;
-}(RequesterResponder));
+})(RequesterResponder);
 exports.Parent = Parent;
 var Child = (function (_super) {
     __extends(Child, _super);
@@ -239,5 +239,5 @@ var Child = (function (_super) {
         }, 1000);
     };
     return Child;
-}(RequesterResponder));
+})(RequesterResponder);
 exports.Child = Child;

@@ -1,4 +1,3 @@
-"use strict";
 function getRefactoringsByFilePath(refactorings) {
     var loc = {};
     for (var _i = 0, refactorings_1 = refactorings; _i < refactorings_1.length; _i++) {

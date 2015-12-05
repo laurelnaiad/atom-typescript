@@ -1,4 +1,3 @@
-"use strict";
 var allTransformers = [];
 function add(transformer) {
     transformer.regex = (new RegExp("transform:" + transformer.name + "{[.\\s]*}transform:" + transformer.name, 'g'));

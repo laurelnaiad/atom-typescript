@@ -1,4 +1,3 @@
-"use strict";
 var utils_1 = require("../lang/utils");
 var packageName = 'atom-typescript';
 function getConfig(nameLambda) {
@@ -69,6 +68,6 @@ var Config = (function () {
         configurable: true
     });
     return Config;
-}());
+})();
 var config = new Config();
 module.exports = config;
