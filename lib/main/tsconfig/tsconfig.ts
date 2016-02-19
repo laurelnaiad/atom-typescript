@@ -60,6 +60,7 @@ interface CompilerOptions {
     stripInternal?: boolean;
     suppressExcessPropertyErrors?: boolean;           // Optionally disable strict object literal assignment checking
     suppressImplicitAnyIndexErrors?: boolean;
+    suppressOutputPathCheck?: boolean;
     target?: string;                                  // 'es3'|'es5' (default)|'es6'
     version?: boolean;
     watch?: boolean;
@@ -110,6 +111,7 @@ var compilerOptionsValidation: simpleValidator.ValidationInfo = {
     stripInternal: { type: types.boolean },
     suppressExcessPropertyErrors: { type: types.boolean },
     suppressImplicitAnyIndexErrors: { type: types.boolean },
+    suppressOutputPathCheck: { type: types.boolean },
     target: { type: types.string, validValues: ['es3', 'es5', 'es6'] },
     version: { type: types.boolean },
     watch: { type: types.boolean },
