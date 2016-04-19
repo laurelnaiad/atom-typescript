@@ -56,6 +56,7 @@ interface CompilerOptions {
     outFile?: string;                                 // new name for out
     outDir?: string;                                  // Redirect output structure to this directory
     preserveConstEnums?: boolean;
+    pretty?: boolean; 
     removeComments?: boolean;                         // Do not emit comments in output
     rootDir?: string;
     sourceMap?: boolean;                              // Generates SourceMaps (.map files)
